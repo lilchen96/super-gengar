@@ -1,0 +1,6 @@
+<svg width="20" height="10" viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+    <!-- 子弹主体 -->
+    <path d="M5 0 L15 5 L5 10 L0 5 Z" fill="#FFD700"/>
+    <!-- 子弹尾焰 -->
+    <path d="M15 3 L20 5 L15 7 L17 5 Z" fill="#FF4500"/>
+</svg>

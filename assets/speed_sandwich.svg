@@ -1,0 +1,18 @@
+<svg width="60" height="40" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <!-- 底部面包片 -->
+    <path d="M5 25 L55 25 L50 35 L10 35 Z" fill="#DEB887"/>
+    <!-- 中间夹层 -->
+    <path d="M8 15 L52 15 L52 25 L8 25 Z" fill="#F4A460"/>
+    <!-- 顶部面包片 -->
+    <path d="M5 15 L55 15 L50 5 L10 5 Z" fill="#DEB887"/>
+    <!-- 闪电图标 (更大) -->
+    <g transform="translate(15, 15) scale(1.8)">
+        <path d="M5 -3 L12 2 L8 4 L15 11 L3 5 L7 3 L0 -2 Z" 
+              fill="#FFD700" 
+              stroke="#FFA500" 
+              stroke-width="1"/>
+        <path d="M7 3 L12 2 L8 4 Z" 
+              fill="#FFFFFF" 
+              opacity="0.6"/>
+    </g>
+</svg>

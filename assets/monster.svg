@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="60" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+    <!-- 光环 -->
+    <circle cx="40" cy="20" r="12" fill="#FFD700" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.6;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- 翅膀 -->
+    <path d="M15,30 C25,20 25,40 20,42 C18,40 15,35 15,30" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="3"/>
+    <path d="M65,30 C55,20 55,40 60,42 C62,40 65,35 65,30" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="3"/>
+    
+    <!-- 身体（更扁平，底部圆润） -->
+    <path d="M30,25 L50,25 L50,45 Q40,50 30,45 Z" fill="#FFFFFF" stroke="#A0A0A0" stroke-width="3" stroke-linejoin="round"/>
+    
+    <!-- 头部（更大更圆） -->
+    <circle cx="40" cy="25" r="10" fill="#FFFFFF" stroke="#A0A0A0" stroke-width="3"/>
+    
+    <!-- 面部特征 -->
+    <circle cx="35" cy="23" r="2" fill="#000000"/>
+    <circle cx="45" cy="23" r="2" fill="#000000"/>
+    <path d="M35,28 Q40,31 45,28" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 腮红 -->
+    <circle cx="32" cy="26" r="3" fill="#FFB6C1" opacity="0.5"/>
+    <circle cx="48" cy="26" r="3" fill="#FFB6C1" opacity="0.5"/>
+    
+    <!-- 装饰细节 -->
+    <path d="M33,35 L47,35" stroke="#D0D0D0" stroke-width="2.5"/>
+    <path d="M35,40 L45,40" stroke="#D0D0D0" stroke-width="2.5"/>
+</svg> 

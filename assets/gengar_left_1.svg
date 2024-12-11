@@ -1,0 +1,57 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- 阴影效果 -->
+    <ellipse cx="50" cy="90" rx="30" ry="5" fill="#000000" opacity="0.3"/>
+    
+    <!-- 身体 -->
+    <path d="M80 40 
+             C80 20 60 10 50 10 
+             C40 10 20 20 20 40 
+             C20 70 40 90 50 90 
+             C60 90 80 70 80 40" 
+          fill="#7B62A3"/>
+    
+    <!-- 身体渐变 -->
+    <path d="M75 40 
+             C75 25 60 15 50 15 
+             C40 15 25 25 25 40 
+             C25 65 40 85 50 85 
+             C60 85 75 65 75 40" 
+          fill="#8B72B3" opacity="0.5"/>
+    
+    <!-- 左眼 -->
+    <circle cx="35" cy="35" r="12" fill="#FF0000"/>
+    <circle cx="35" cy="35" r="8" fill="#FF3333"/>
+    <circle cx="35" cy="35" r="4" fill="#FFFFFF"/>
+    <circle cx="33" cy="33" r="2" fill="#FFFFFF"/>
+    
+    <!-- 嘴巴 -->
+    <path d="M25 55 
+             Q40 65 55 55 
+             Q40 62 25 55" 
+          fill="#4A3B63"/>
+    <path d="M25 55 Q40 65 55 55" 
+          stroke="#FFFFFF" 
+          stroke-width="2" 
+          fill="none"/>
+    
+    <!-- 尖牙 -->
+    <path d="M30 55 L25 63 L35 55" fill="#FFFFFF"/>
+    <path d="M50 55 L45 63 L55 55" fill="#FFFFFF"/>
+    
+    <!-- 手臂 -->
+    <path d="M75 45 
+             Q85 55 80 65" 
+          stroke="#7B62A3" 
+          stroke-width="10" 
+          stroke-linecap="round"/>
+    
+    <!-- 尖刺装饰 -->
+    <path d="M30 20 L35 25 L40 20" 
+          stroke="#8B72B3" 
+          stroke-width="2" 
+          fill="none"/>
+    <path d="M60 20 L65 25 L70 20" 
+          stroke="#8B72B3" 
+          stroke-width="2" 
+          fill="none"/>
+</svg>

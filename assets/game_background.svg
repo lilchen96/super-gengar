@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- 渐变天空背景 -->
+    <defs>
+        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#0B1026;stop-opacity:1" />
+            <stop offset="30%" style="stop-color:#1B2845;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2C3E50;stop-opacity:1" />
+        </linearGradient>
+        
+        <!-- 云朵形状 - 缩小基础大小 -->
+        <g id="cloud">
+            <path d="M15,35 
+                     a12,12 0 0,1 0,-24 
+                     a15,15 0 0,1 30,0 
+                     a12,12 0 0,1 0,24 
+                     z" 
+                  fill="white" 
+                  opacity="0.3"/>
+        </g>
+    </defs>
+
+    <!-- 蓝天背景 - 充满整个区域 -->
+    <rect x="0" y="0" width="800" height="600" fill="url(#skyGradient)"/>
+    
+    <!-- 云朵 - 缩小缩放比例，确保完全显示 -->
+    <use href="#cloud" transform="translate(100,50) scale(1.0)"/>
+    <use href="#cloud" transform="translate(300,70) scale(1.2)"/>
+    <use href="#cloud" transform="translate(500,40) scale(0.8)"/>
+    <use href="#cloud" transform="translate(650,60) scale(1.1)"/>
+    <use href="#cloud" transform="translate(200,80) scale(0.9)"/>
+    <use href="#cloud" transform="translate(400,45) scale(1.0)"/>
+</svg> 

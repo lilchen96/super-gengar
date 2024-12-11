@@ -1,0 +1,11 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+    <!-- 外圈 -->
+    <circle cx="25" cy="25" r="20" fill="#FFD700"/>
+    <!-- 内圈 -->
+    <circle cx="25" cy="25" r="16" fill="#FFED4A"/>
+    <!-- 高光 -->
+    <circle cx="18" cy="18" r="5" fill="#FFFFFF" opacity="0.5"/>
+    <!-- 符号 -->
+    <text x="25" y="32" font-family="Arial" font-size="24" font-weight="bold" 
+          text-anchor="middle" fill="#B8860B">¥</text>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- 帽子主体（更高更立体） -->
+    <path d="M10 60 Q50 70 90 60 L85 35 Q50 42 15 35 Z" fill="#FF0000"/>
+    
+    <!-- 帽子白色部分（加高） -->
+    <path d="M15 35 Q50 42 85 35 L80 15 Q50 22 20 15 Z" fill="#FFFFFF"/>
+    
+    <!-- 帽子阴影（加深） -->
+    <path d="M10 60 Q50 70 90 60 L85 55 Q50 62 15 55 Z" fill="#CC0000"/>
+    
+    <!-- 帽子顶部装饰（调整位置） -->
+    <circle cx="50" cy="18" r="10" fill="#FFFFFF" stroke="#FF0000" stroke-width="2.5"/>
+    <circle cx="50" cy="18" r="5" fill="#FF0000"/>
+    
+    <!-- 帽檐装饰（调整位置） -->
+    <path d="M15 60 Q50 65 85 60" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- 帽子下的阴影效果（调整位置） -->
+    <ellipse cx="50" cy="62" rx="40" ry="3" fill="#00000033"/>
+    
+    <!-- 火柴人小腿（调整位置） -->
+    <g transform="translate(50, 63)">
+        <!-- 左腿 -->
+        <line x1="-8" y1="0" x2="-5" y2="15" stroke="#000000" stroke-width="2" stroke-linecap="round">
+            <animate attributeName="x2" values="-5;-8;-5" dur="0.5s" repeatCount="indefinite"/>
+            <animate attributeName="y2" values="15;10;15" dur="0.5s" repeatCount="indefinite"/>
+        </line>
+        <!-- 右腿 -->
+        <line x1="8" y1="0" x2="5" y2="15" stroke="#000000" stroke-width="2" stroke-linecap="round">
+            <animate attributeName="x2" values="5;8;5" dur="0.5s" repeatCount="indefinite" begin="0.25s"/>
+            <animate attributeName="y2" values="15;10;15" dur="0.5s" repeatCount="indefinite" begin="0.25s"/>
+        </line>
+    </g>
+    
+    <!-- 帽子侧面装饰 -->
+    <path d="M15 35 L10 60" fill="none" stroke="#CC0000" stroke-width="1.5"/>
+    <path d="M85 35 L90 60" fill="none" stroke="#CC0000" stroke-width="1.5"/>
+</svg> 

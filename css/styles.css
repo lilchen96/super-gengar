@@ -1,0 +1,384 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+#game {
+}
+
+.game-ui-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#game-ui {
+  position: relative;
+}
+
+.score-ui {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  /* margin-right: 10px; */
+}
+.score-label {
+}
+.score-value {
+  margin-left: 0.5rem;
+  /* font-size: 2rem; */
+}
+
+/* 暂停界面样式 */
+.pause-ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.pause-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem 5rem;
+  border-radius: 2rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pause-title {
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
+  animation: glowPauseText 2s infinite alternate;
+}
+
+@keyframes glowPauseText {
+  from {
+    text-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(0, 150, 255, 0.8);
+  }
+}
+
+.pause-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.pause-score-value {
+  margin-left: 1rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.pause-tip {
+  font-size: 1.8rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: pulseTip 1.5s infinite alternate;
+}
+
+@keyframes pulseTip {
+  from {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 游戏结束界面样式 */
+.game-over-ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  color: white;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.game-over-tip {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.game-over-score {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.game-over-score-value {
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.game-over-restart {
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  border-radius: 2rem;
+  cursor: pointer;
+  /* transition: all 0.3s ease; */
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.game-over-restart:hover {
+  /* transform: translateY(-2px); */
+  box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+  background: linear-gradient(135deg, #27ae60, #219a52);
+}
+
+.game-over-restart:active {
+  /* transform: translateY(1px); */
+  box-shadow: 0 2px 10px rgba(46, 204, 113, 0.3);
+}
+
+/* 能力UI样式 */
+.abilities-ui-container {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ability-ui {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20%;
+  background: #2c2c2c;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  animation: abilityAppear 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* 射击能力的底色 - 暗影球的紫色调 */
+.ability-ui.shooting {
+  background: linear-gradient(
+    135deg,
+    rgba(74, 20, 140, 0.8),  /* #4a148c */
+    rgba(49, 27, 146, 0.8)   /* #311b92 */
+  );
+}
+
+/* 速度能力的底色 - 电光的黄色调 */
+.ability-ui.speed {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 192, 45, 0.8), /* #fbc02d */
+    rgba(245, 127, 23, 0.8)  /* #f57f17 */
+  );
+}
+
+.ability-ui::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent 60%);
+  z-index: 2;
+}
+
+.ability-ui::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.5),
+    inset 0 0 5px rgba(255, 255, 255, 0.2);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.ability-ui.active {
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.ability-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 90%;
+  /* border-radius: 10%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7));
+}
+
+.ability-icon.tm-dark {
+  background-image: url("../assets/tm-dark.png");
+}
+
+.ability-icon.tm-electric {
+  background-image: url("../assets/tm-electric.png");
+}
+
+.ability-cooldown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 10%; */
+  z-index: 2;
+  background: conic-gradient(rgba(0, 0, 0, 0.7) var(--progress), transparent 0);
+  transform: rotate(-90deg);
+  transition: background 0.1s linear;
+}
+
+.ability-timer {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  font-weight: bold;
+}
+
+/* 激活时的特效 */
+.ability-ui.active::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.8),
+    transparent 70%
+  );
+  /* border-radius: 10px; */
+  z-index: 0;
+  animation: borderGlow 3s infinite ease-in-out;
+  filter: blur(3px);
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+@keyframes abilityAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <!-- 砖块主体 -->
+    <rect width="32" height="32" fill="#4a9c2d"/>
+    
+    <!-- 砖块纹理 -->
+    <rect x="2" y="2" width="28" height="28" fill="#5fb23c"/>
+    
+    <!-- 高光效果 -->
+    <rect x="2" y="2" width="28" height="4" fill="#7ac358" opacity="0.6"/>
+    
+    <!-- 阴影效果 -->
+    <rect x="2" y="26" width="28" height="4" fill="#387823" opacity="0.6"/>
+    
+    <!-- 砖块边缘 -->
+    <line x1="0" y1="0" x2="32" y2="0" stroke="#387823" stroke-width="1"/>
+    <line x1="0" y1="32" x2="32" y2="32" stroke="#387823" stroke-width="1"/>
+</svg>
